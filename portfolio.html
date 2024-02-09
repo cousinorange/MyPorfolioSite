@@ -8,11 +8,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+  
+    <style>
+        ui5-media-gallery-item:not(:defined) {
+            visibility: hidden;
+        }
+        @media (min-width: 600px) {
+            ui5-media-gallery {
+                height: 50rem;
+            }
+        }
+    </style>
+
+
+<style>
+  /* CSS for image gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust this line */
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+
 </head>
 <body>
     <div class="container">
         <h1>Photographer Joe: Portfolio</h1>
     </div>
+
+<!-- NAVBAR CODE -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">  </a>
@@ -31,20 +61,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a> 
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li> --> 
+            
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -56,23 +73,8 @@
 
 
 
+<!-- GALLERY ONE CODE -[FAILED] -->
 
-
-
-
-
-
-
-    <style>
-        ui5-media-gallery-item:not(:defined) {
-            visibility: hidden;
-        }
-        @media (min-width: 600px) {
-            ui5-media-gallery {
-                height: 50rem;
-            }
-        }
-    </style>
      <ui5-media-gallery id="media-gallery-1" show-all-thumbnails>
     <ui5-media-gallery-item>
         <img src="../assets/images/HT-1000.jpg">
@@ -93,7 +95,17 @@
         <img src="../assets/images/HT-2026.jpg">
     </ui5-media-gallery-item>
     </ui5-media-gallery>
-    <!-- Bootstrap JS (optional) -->
+
+<!-- GALLERY TWO CODE -[FAILED] -->
+<div class="gallery">
+  <img src="path_to_your_image1.jpg" alt="Image 1">
+  <img src="path_to_your_image2.jpg" alt="Image 2">
+  <img src="path_to_your_image3.jpg" alt="Image 3">
+  <!-- Add more img tags for additional images -->
+</div>
+
+  <!-- Bootstrap JS (optional) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
